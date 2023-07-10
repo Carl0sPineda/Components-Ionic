@@ -1,0 +1,49 @@
+<app-header titulo="Accordion"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Accordion</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card class="ion-padding">
+    <img
+      src="https://images.theconversation.com/files/447013/original/file-20220217-13-17sd21d.jpg?ixlib=rb-1.1.0&rect=0%2C14%2C4888%2C3224&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip"
+      alt="clase"
+      srcset=""
+      style="height: 200px; width: 100%"
+    />
+  </ion-card>
+  <div>
+    <h1 class="ion-text-center"><strong>Lista de grupos</strong></h1>
+    <ion-accordion-group class="ion-padding">
+      <ion-accordion value="first">
+        <ion-item slot="header" color="dark">
+          <ion-icon name="people" class="ion-padding"></ion-icon>
+          <ion-label>Grupo 1</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Carlos</div>
+        <div class="ion-padding" slot="content">Jose</div>
+        <div class="ion-padding" slot="content">Jhonny</div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="primary">
+          <ion-icon name="people" class="ion-padding"></ion-icon>
+          <ion-label>Grupo 2</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Luis</div>
+        <div class="ion-padding" slot="content">Samuel</div>
+        <div class="ion-padding" slot="content">Ruamer</div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-icon name="people" class="ion-padding"></ion-icon>
+          <ion-label>Grupo 3</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Kendall</div>
+        <div class="ion-padding" slot="content">Anthony</div>
+        <div class="ion-padding" slot="content">Greivin</div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+</ion-content>

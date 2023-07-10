@@ -1,0 +1,49 @@
+<app-header titulo="Tabs"></app-header>
+
+<ion-content [fullscreen]="true"
+  ><ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Tabs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1 class="ion-text-center" style="margin-top: 200px">
+    Selecciona una opción del menú inferior
+  </h1>
+
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    "
+  >
+    <ion-icon
+      class="ion-padding"
+      style="height: 100px; width: 100px"
+      name="arrow-down-outline"
+    ></ion-icon>
+  </div>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="spinner">
+        <ion-icon name="sync"></ion-icon>
+        Spinner
+      </ion-tab-button>
+      <ion-tab-button tab="action-sheet">
+        <ion-icon name="settings"></ion-icon>
+        Action sheet
+      </ion-tab-button>
+      <ion-tab-button tab="picker">
+        <ion-icon name="aperture"></ion-icon>
+        Picker
+      </ion-tab-button>
+      <ion-tab-button tab="searchbar">
+        <ion-icon name="search"></ion-icon>
+        Searchbar
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

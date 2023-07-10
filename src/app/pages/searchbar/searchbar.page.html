@@ -1,0 +1,22 @@
+<app-header titulo="Searchbar"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Searchbar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-searchbar
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="buscarComponente()"
+    placeholder="Buscar..."
+    showClearButton="never"
+    class="ion-padding"
+  ></ion-searchbar>
+
+  <p *ngIf="searchTerm" class="ion-padding" style="font-size: 20px">
+    Búsqueda realizada de: <strong>{{searchTerm}}</strong>
+  </p>
+</ion-content>

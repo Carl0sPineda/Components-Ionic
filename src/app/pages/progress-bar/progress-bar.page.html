@@ -1,0 +1,43 @@
+<app-header titulo="Progress bar"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Progress bar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      margin-left: 20px;
+    "
+  >
+    <ion-progress-bar
+      style="margin-top: 100px"
+      [value]="progress"
+    ></ion-progress-bar>
+  </div>
+  <br />
+  <span style="font-size: 20px; margin-left: 20px">Cargando proceso...</span>
+
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+      margin-left: 20px;
+    "
+  >
+    <ion-progress-bar
+      style="margin-top: 100px"
+      type="indeterminate"
+    ></ion-progress-bar>
+  </div>
+  <br />
+  <span style="font-size: 20px; margin-left: 20px">Cargando proceso...</span>
+</ion-content>

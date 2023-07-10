@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title class="ion-text-center" style="font-size: 1.7rem"
+      ><strong>inicio</strong></ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-icon
+      slot="end"
+      color="primary"
+      style="margin-right: 20px"
+      name="moon"
+    ></ion-icon>
+    <ion-toggle
+      aria-label="Light toggle"
+      slot="end"
+      (ionChange)="toggleDarkMode()"
+      >Modo oscuro</ion-toggle
+    >
+  </ion-item>
+
+  <ion-searchbar
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="buscarComponente()"
+    placeholder="Buscar componente..."
+    show-clear-button="never"
+    class="ion-padding"
+  ></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let c of componentesPagina" [routerLink]="c.redirectTo">
+      <ion-icon
+        color="tertiary"
+        [name]="c.icon"
+        slot="start"
+        style="font-size: 1.8rem"
+      ></ion-icon>
+      {{c.name}}
+    </ion-item>
+  </ion-list>
+
+  <div
+    class="ion-margin-horizontal"
+    style="margin-bottom: 20px; margin-top: 8px"
+  >
+    <button
+      class="ion-padding custom-btn"
+      (click)="mostrarPaginaAnterior()"
+      [disabled]="paginaActual === 1"
+    >
+      <ion-icon name="arrow-back-sharp" class="custom-icon"></ion-icon>
+    </button>
+
+    <p class="ion-padding text-inline">
+      Página {{paginaActual}} de {{totalPaginas}}
+    </p>
+    <button
+      class="ion-padding custom-btn"
+      (click)="mostrarPaginaSiguiente()"
+      [disabled]="paginaActual === totalPaginas"
+    >
+      <ion-icon name="arrow-forward-sharp" class="custom-icon"></ion-icon>
+    </button>
+  </div>
+  <!-- <ion-toolbar color="tertiary"> -->
+  <!-- <ion-title class="ion-text-center" style="font-size: 1.2rem"
+      ><strong>Carlos Zuñiga Pineda</strong></ion-title
+    > -->
+  <!-- </ion-toolbar> -->
+</ion-content>

@@ -1,0 +1,43 @@
+<app-header titulo="Select"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Select</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 80px">
+    <ion-card-content>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Colouring_pencils.jpg/1200px-Colouring_pencils.jpg"
+        alt="lapices"
+        srcset=""
+      />
+    </ion-card-content>
+  </ion-card>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    "
+  >
+    <ion-icon name="color-palette-outline"></ion-icon>
+    <ion-list>
+      <ion-item>
+        <ion-select
+          aria-label="color"
+          placeholder="Selecciona tu color favorito"
+        >
+          <ion-select-option>Rojo</ion-select-option>
+          <ion-select-option>Azul</ion-select-option>
+          <ion-select-option>Negro</ion-select-option>
+          <ion-select-option>Amarillo</ion-select-option>
+          <ion-select-option>Blanco</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

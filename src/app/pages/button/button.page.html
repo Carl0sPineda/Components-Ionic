@@ -1,0 +1,37 @@
+<app-header titulo="Button"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Button</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 50px">
+    <ion-card-content>
+      <h1 style="text-align: center">Contador de clicks</h1>
+      <img
+        src="https://img.freepik.com/premium-vector/hand-click-icon-trendy-outline-style-design-vector-graphic-illustration-click-symbol-website-design-logo-app-ui_175838-2817.jpg?w=740"
+        alt=""
+        srcset=""
+      />
+    </ion-card-content>
+  </ion-card>
+  <div
+    style="display: flex; justify-content: center; align-items: center"
+  ></div>
+  <ion-button
+    class="ion-padding-horizontal"
+    color="dark"
+    (click)="handleLike()"
+    style="
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    Contador
+  </ion-button>
+  <h3 class="ion-text-center">+<strong> {{countValue}}</strong></h3>
+</ion-content>

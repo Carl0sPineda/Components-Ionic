@@ -1,0 +1,48 @@
+<app-header titulo="Checkbox"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Checkbox</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <br />
+  <div style="margin-top: 50px">
+    <ion-label class="ion-padding" style="font-size: 20px"
+      >Elige tu favorito</ion-label
+    >
+    <br />
+    <br />
+    <ion-checkbox
+      class="ion-padding"
+      (ionChange)="checkboxChanged($event, 'Android')"
+    >
+      <ion-icon
+        name="logo-android"
+        color="success"
+        style="margin-right: 5px"
+      ></ion-icon>
+      Android
+    </ion-checkbox>
+
+    <ion-checkbox
+      class="ion-padding"
+      (ionChange)="checkboxChanged($event, 'iPhone')"
+    >
+      <ion-icon
+        name="logo-apple"
+        color="medium"
+        style="margin-right: 5px"
+      ></ion-icon
+      >iPhone
+    </ion-checkbox>
+
+    <br />
+    <br />
+
+    <ion-label class="ion-padding"
+      >Haz seleccionado:
+      <strong>{{ selectedItems.join(', ') }}</strong></ion-label
+    >
+  </div>
+</ion-content>

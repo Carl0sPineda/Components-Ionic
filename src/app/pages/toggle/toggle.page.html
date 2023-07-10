@@ -1,0 +1,38 @@
+<app-header titulo="Toggle"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Toggle</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+    "
+  >
+    <ion-icon
+      style="height: 200px; width: 200px; color: green"
+      name="logo-android"
+    ></ion-icon>
+  </div>
+  <ion-item>
+    <ion-label
+      ><h1 class="ion-text-center">Permisos de mi aplicación</h1></ion-label
+    >
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-toggle>Recibir notificaciones push</ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-toggle>Recibir emails</ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-toggle>Recibir mensajes</ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

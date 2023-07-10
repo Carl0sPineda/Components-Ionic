@@ -1,0 +1,43 @@
+<app-header titulo="Radio"></app-header>
+
+<ion-content [fullscreen]="true"
+  ><ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Radio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 50px">
+    <img
+      src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2021/01/fastFoods1-1199461884-770x533-1-650x428.jpg"
+      alt="comida"
+      srcset=""
+    />
+  </ion-card>
+  <h1 class="ion-padding" style="font: bold">¿Cuál es tu favorita?</h1>
+  <div class="ion-padding">
+    <ion-radio-group (ionChange)="onSelect($event)">
+      <ion-radio style="margin-bottom: 10px; font-size: 20px" value="Helado"
+        >Helado</ion-radio
+      ><br />
+      <ion-radio
+        style="margin-bottom: 10px; font-size: 20px"
+        value="Hamburguesa"
+        >Hamburguesa</ion-radio
+      ><br />
+      <ion-radio style="margin-bottom: 10px; font-size: 20px" value="Pizza"
+        >Pizza</ion-radio
+      ><br />
+      <ion-radio style="margin-bottom: 10px; font-size: 20px" value="Sushi"
+        >Sushi</ion-radio
+      >
+    </ion-radio-group>
+    <br />
+    <br />
+    <br />
+    <div *ngIf="selected" style="font-size: 20px">
+      Genial haz seleccionado:
+      <strong>{{ selected }}</strong>
+    </div>
+  </div>
+</ion-content>

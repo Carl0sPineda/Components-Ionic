@@ -1,0 +1,36 @@
+<app-header titulo="Popover"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Popover</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 100px">
+    <img
+      src="https://ionicframework.com/img/framework-og-img.png"
+      alt="ionic"
+    />
+  </ion-card>
+  <ion-button
+    class="ion-padding"
+    color="dark"
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    "
+    (click)="presentPopover($event)"
+    ><ion-icon class="ion-padding" name="logo-ionic"></ion-icon
+    >Información</ion-button
+  >
+  <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+    <ng-template>
+      <ion-content class="ion-padding"
+        >Framework para desarrollo mobile</ion-content
+      >
+    </ng-template>
+  </ion-popover>
+</ion-content>

@@ -1,0 +1,36 @@
+<app-header titulo="Floating action button"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Floating action button</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 100px">
+    <h1 style="text-align: center">Dispositivos disponibles</h1>
+    <img
+      src="https://www.educaciontrespuntocero.com/wp-content/uploads/2021/05/consejos-uso-inteligente-tecnologia-978x652.png"
+      alt="dispositivos"
+      srcset=""
+    />
+  </ion-card>
+  <ion-fab class="ion-margin-top" style="margin-left: 20px">
+    <ion-fab-button size="small">
+      <ion-icon name="phone-portrait"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button>
+        <ion-icon name="laptop"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-apple"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-android"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <br />
+    <!-- <ion-label>Seleccione un dispositivo</ion-label> -->
+  </ion-fab>
+</ion-content>

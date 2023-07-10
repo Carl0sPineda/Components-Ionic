@@ -1,0 +1,39 @@
+<app-header titulo="Picker"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Picker</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1 class="ion-padding" style="text-align: center">
+    ¿Cuál es tu framework mobile favorito?
+  </h1>
+  <img
+    src="https://www.mindinventory.com/blog/wp-content/uploads/2022/10/app-development-framework.png"
+    alt=""
+    srcset=""
+  />
+  <ion-button
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    "
+    class="ion-padding"
+    id="open-picker"
+    (click)="openPicker()"
+    >Seleccionar</ion-button
+  >
+
+  <p
+    class="ion-padding"
+    *ngIf="selectedOption"
+    style="font-size: 20px; text-align: center"
+  >
+    Seleccionaste:
+    <strong>{{ selectedOption }} </strong>
+  </p>
+</ion-content>

@@ -1,0 +1,23 @@
+<app-header titulo="Date & Time Picker"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Date time picker</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1 class="ion-padding" style="font-size: 24px">
+    Selecciona tu fecha de reserva
+  </h1>
+  <ion-datetime class="ion-padding" (ionChange)="mostrarTiempo($event)">
+    <span class="ion-padding" slot="time-label">Tiempo</span>
+  </ion-datetime>
+
+  <p class="ion-padding" style="margin-left: 25px">
+    Reserva exitosa para el dia y hora:
+    <br />
+    <br />
+    <strong> {{ tiempoSeleccionado }}</strong>
+  </p>
+</ion-content>

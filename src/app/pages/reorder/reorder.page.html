@@ -1,0 +1,60 @@
+<app-header titulo="Reorder"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="medium">Reorder</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card style="margin-top: 80px">
+    <h1 class="ion-text-center">Reordena a tu elección</h1>
+    <ion-card-content>
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/editor-7/32/Editor_Low_Priority-512.png"
+        alt="reorganizar"
+        srcset=""
+        style="height: 200px; width: 100%"
+      />
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-reorder-group
+      [disabled]="false"
+      (ionItemReorder)="handleReorder($any($event))"
+    >
+      <ion-item>
+        <ion-label style="font-size: 20px">
+          <strong>1.</strong> Luis
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="font-size: 20px"
+          ><strong>2.</strong> Justin
+        </ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="font-size: 20px"
+          ><strong>3.</strong> Roberto</ion-label
+        >
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="font-size: 20px"
+          ><strong>4.</strong> Carlos</ion-label
+        >
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="font-size: 20px"><strong>5.</strong> Juan</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+</ion-content>
